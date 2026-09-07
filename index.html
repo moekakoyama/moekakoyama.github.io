@@ -3,10 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Moeka Koyama</title>
+  <meta
+    name="description"
+    content="Personal website of Moeka Koyama."
+  >
+
+  <style>
+    /* ---------- Basic settings ---------- */
+
+    :root {
+      --background: #fbfafc;
+      --text: #171717;
+      --link: #2937c8;
+      --secondary: #686273;
+      --line: #dedbe3;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 54px 0 80px;
+    }
+
+    header {
+      margin-bottom: 42px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.75fr) minmax(0, 2fr);
+      gap: 80px;
+      align-items: start;
+    }
+
+    section {
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: lowercase;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .about {
+      position: sticky;
+      top: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      margin-top: 20px;
+      font-size: 0.92rem;
+    }
+
+   
+    /* ---------- Mobile layout ---------- */
+
+    @media (max-width: 700px) {
+      html {
+        font-size: 17px;
+      }
+
+      .page {
+        width: min(100% - 32px, var(--max-width));
+        padding-top: 32px;
+      }
+
+      header {
+        margin-bottom: 30px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .about {
+        position: static;
+      }
+
+      .work-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Moeka Koyama</h1>
+  <main class="page">
+    <header>
+      <h1>Moeka Koyama</h1>
+    </header>
+
+    <div class="layout">
+      <!-- LEFT COLUMN -->
+      <aside class="about">
+        <section>
+          <h2>about</h2>
+
+          <p>
+            For personal use.
+          </p>
+
+          <p>
+            For personal use .
+          </p>
+
+          <nav class="links" aria-label="Personal links">
+            <a href="mailto:YOUR-EMAIL@example.com">email</a>
+            <a href="YOUR-LINKEDIN-URL" target="_blank" rel="noopener">
+              linkedin
+            </a>
+            <a href="YOUR-CV-FILE.pdf" target="_blank">
+              cv
+            </a>
+          </nav>
+        </section>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <section>
+          <h2>selected work</h2>
+
+          <ol class="work-list">
+            <li class="work-item">
+              <span class="year">2026</span>
+
+              <div>
+                <a class="work-title" href="PROJECT-LINK">
+                  Title
+                </a>
+
+                <span class="work-description">
+                  — Add 
+                </span>
+
+    
+              </div>
+            </li>
+
+            <li class="work-item">
+              <span class="year">2025</span>
+
+              <div>
+                <a class="work-title" href="PROJECT-LINK">
+                  Title 
+                </a>
+
+                <span class="work-description">
+                  — Add 
+                </span>
+
+              
+              </div>
+            </li>
+
+            <li class="work-item">
+              <span class="year">2024</span>
+
+              <div>
+                <a class="work-title" href="PROJECT-LINK">
+                  Title 
+                </a>
+
+                <span class="work-description">
+                  — Add 
+                </span>
+
+                
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Duplicate this section if you want another category. -->
+        <section>
+          <h2>other projects</h2>
+
+          <ol class="work-list">
+            <li class="work-item">
+              <span class="year">2025</span>
+
+              <div>
+                <a class="work-title" href="PROJECT-LINK">
+                  Title
+
+                <span class="work-description">
+                  — Add 
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Moeka Koyama
+    </footer>
+  </main>
 </body>
 </html>
